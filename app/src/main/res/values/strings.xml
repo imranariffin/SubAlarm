@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SubAlarm</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- main activity strings -->
+    <string name="button_text">next</string>
+    <string name="hello_world">Hellow World!</string>
+    <string name="title_activity_new">NewActivity</string>
+</resources>
