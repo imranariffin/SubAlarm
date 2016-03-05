@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         Calendar t = Calendar.getInstance();
-        t.add(Calendar.SECOND, 3);
+        t.add(Calendar.SECOND, 2);
 
         Intent aRingIntent = new Intent(this, AlarmRing.class);
         PendingIntent pending = PendingIntent.getActivity(
@@ -81,8 +81,5 @@ public class MainActivity extends AppCompatActivity {
                 t.getTimeInMillis(),
                 pending
         );
-
-//        Intent aRingIntent = new Intent(this, AlarmRing.class);
-//        startActivity(aRingIntent);
     }
 }

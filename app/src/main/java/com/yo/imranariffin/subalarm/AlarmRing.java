@@ -51,7 +51,7 @@ public class AlarmRing extends AppCompatActivity {
         stopBtn.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch (View arg0, MotionEvent arg1) {
                 player.stop();
-                Intent byeIntent = new Intent(that, Bye.class);
+                Intent byeIntent = new Intent(that, NewActivity3.class);
                 startActivity(byeIntent);
                 return false;
             }
