@@ -1,5 +1,8 @@
 package com.yo.imranariffin.subalarm;
 
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,10 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String MESSAGE = "com.yo.imranariffin.subalarm.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +58,31 @@ public class MainActivity extends AppCompatActivity {
 
 //    @Override
     public void goToNewActivity(View view) {
-        Intent intent = new Intent(this, NewActivity.class);
-        EditText editText = (EditText) findViewById(R.id.message_edit);
-        String message = editText.getText().toString();
-        intent.putExtra(MESSAGE, message);
-        startActivity(intent);
+        Intent nActivityIntent = new Intent(this, NewActivity.class);
+        startActivity(nActivityIntent);
+    }
+    public void goToAlarm(View view) {
+
+        setContentView(R.layout.activity_main);
+        Calendar t = Calendar.getInstance();
+        t.add(Calendar.SECOND, 3);
+
+        Intent aRingIntent = new Intent(this, AlarmRing.class);
+        PendingIntent pending = PendingIntent.getActivity(
+                this,
+                1235,
+                aRingIntent,
+                PendingIntent.FLAG_CANCEL_CURRENT
+        );
+
+        AlarmManager alarm = (AlarmManager)getSystemService(Activity.ALARM_SERVICE);
+        alarm.set(
+                AlarmManager.RTC_WAKEUP,
+                t.getTimeInMillis(),
+                pending
+        );
+
+//        Intent aRingIntent = new Intent(this, AlarmRing.class);
+//        startActivity(aRingIntent);
     }
 }

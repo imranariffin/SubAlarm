@@ -7,19 +7,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-public class NewActivity extends AppCompatActivity {
+public class NewActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
+        setContentView(R.layout.activity_new2);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new2);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_new);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_new2);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,18 +26,10 @@ public class NewActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        String message = this.getString(R.string.text_new);
-        TextView textView = new TextView(this);
-        textView.setText(message);
-
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.newActivity);
-        layout.addView(textView);
     }
 
-    public void goToNewActivity2 (View view) {
-        Intent nActivityIntent2 = new Intent(this, NewActivity2.class);
-        startActivity(nActivityIntent2);
+    public void goToNewActivity3 (View view) {
+        Intent nActivityIntent3 = new Intent(this, NewActivity3.class);
+        startActivity(nActivityIntent3);
     }
-
 }

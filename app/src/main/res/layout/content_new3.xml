@@ -8,17 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:id="@+id/newActivity"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.yo.imranariffin.subalarm.NewActivity"
-    tools:showIn="@layout/activity_new">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/btn_to_newactivity2"
-        android:onClick="goToNewActivity2"/>
+    tools:context="com.yo.imranariffin.subalarm.NewActivity3"
+    tools:showIn="@layout/activity_new3">
 
 </RelativeLayout>

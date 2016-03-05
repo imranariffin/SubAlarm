@@ -8,30 +8,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/AlarmRing"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.yo.imranariffin.subalarm.MainActivity"
-    tools:showIn="@layout/activity_main">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_text" />
+    tools:context="com.yo.imranariffin.subalarm.AlarmRing"
+    tools:showIn="@layout/activity_alarm_ring">
 
     <Button
+        android:id="@+id/btn_alarm_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="@string/btn_to_newactivity"
-        android:layout_centerHorizontal="true"
+        android:text="stop alarm!"
         android:layout_centerVertical="true"
-        android:onClick="goToNewActivity" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:text="@string/btn_to_alarm"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="goToAlarm" />
 </RelativeLayout>

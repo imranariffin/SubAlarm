@@ -8,6 +8,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- <activity -->
+        <!-- android:name=".SubAlarm" -->
+        <!-- android:label="@string/app_name" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -27,6 +37,27 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.yo.imranariffin.subalarm.MainActivity" />
         </activity>
+        <activity
+            android:name=".NewActivity2"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/title_activity_new2"
+            android:theme="@style/AppTheme.NoActionBar" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.yo.imranariffin.subalarm.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewActivity3"
+            android:label="@string/title_activity_new3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlarmRing"
+            android:label="@string/title_activity_alarm_ring"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.yo.imranariffin.subalarm.MainActivity" />
+        </activity>
     </application>
 
-</manifest>
+</manifest> <!-- <?xml version="1.0" encoding="utf-8"?> --><!-- <manifest xmlns:android="http://schemas.android.com/apk/res/android" --><!-- package="com.yo.imranariffin.subalarm"> --><!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> --><!-- <uses-permission android:name="android.permission.VIBRATE" /> --><!-- <application --><!-- android:name=".SubAlarm" --><!-- android:allowBackup="true" --><!-- android:icon="@mipmap/ic_launcher" --><!-- android:label="@string/app_name" --><!-- android:supportsRtl="true" --><!-- android:theme="@style/AppTheme"> --><!-- <activity --><!-- android:name=".SubAlarm" --><!-- android:label="@string/app_name" > --><!-- <intent-filter> --><!-- <action android:name="android.intent.action.MAIN" /> --><!-- <category android:name="android.intent.category.LAUNCHER" /> --><!-- </intent-filter> --><!-- </activity> --><!-- <activity --><!-- android:name=".AddAlarmActivity" --><!-- android:windowSoftInputMode="stateHidden"></activity> --><!-- <activity android:name=".SettingsActivity"></activity> --><!-- <receiver android:name=".AlarmSetter"> --><!-- <intent-filter> --><!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> --><!-- </intent-filter> --><!-- </receiver> --><!-- <receiver android:name=".AlarmReceiver"></receiver> --><!-- <service android:name=".AlarmService"></service> --><!-- </application> --><!-- </manifest> -->
